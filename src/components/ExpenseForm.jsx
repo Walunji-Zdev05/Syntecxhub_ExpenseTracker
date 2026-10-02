@@ -46,7 +46,7 @@ function ExpenseForm({addExpense}){
                 value = {description}
                 onChange={(e) => setDescription(e.target.value)}
                  />
-            <button type="submit" > Add Expense</button>
+            <button type="submit">Add Expense</button>
        </form>
 
     );
