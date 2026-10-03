@@ -28,7 +28,10 @@ function ExpenseForm({addExpense}){
     }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}
+        className="mb-8 rounded-xl bg-white p-6 shadow-md"
+        >
+            <div className="space-y-4">
 
             <input 
                 type="text" 
@@ -36,28 +39,36 @@ function ExpenseForm({addExpense}){
                 value= {name}
                 onChange={(e) => setName(e.target.value)}
                 ref={nameInputRef}
+                className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-blue-500"
                 />
             <input
                 type="number" 
                 placeholder="Amount"
                 value={amount} 
                 onChange={(e) => setAmount(e.target.value)}
+                className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-blue-500"
                 />
             <input 
                 type="text" 
                 placeholder="Category"
                 value={category}
                 onChange={(e)=> setCategory(e.target.value)
-                 }
-                 ref={categoryInputRef}
+                }
+                ref={categoryInputRef}
+                className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-blue-500"
                 />
             <textarea
                 placeholder="Description"
                 value = {description}
                 onChange={(e) => setDescription(e.target.value)}
                 ref={descriptionInputRef}
+                className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-blue-500"
                  />
-            <button type="submit">Add Expense</button>
+            <button type="submit"
+            className="w-full rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white transition hover:bg-blue-700">
+                Add Expense
+            </button>
+            </div>
        </form>
 
     );
